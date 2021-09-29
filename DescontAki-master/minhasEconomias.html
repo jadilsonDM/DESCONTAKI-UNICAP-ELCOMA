@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/menu.css" rel="stylesheet">
+    <link href="./style/minhasEconomias.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/grafico2.css">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+
+    <title>Minhas Economias</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="checkMenu">
+        <label id="labelCheckMenu" for="checkMenu">
+            <img id="imgMenu" src="img/menu.png" alt="menu">
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="itensMenu" href="home.html">&nbsp;Início</a></li>
+                <li>
+                    <a class="itensMenu" href="notaFiscal.html">&nbsp;Incluir Nota Fiscal</a>
+                </li>
+                <li><a class="itensMenu" href="dadosPessoais.html">&nbsp;Dados Pessoais</a></li>
+                <li><a class="itensMenu" href="meusCupons.html">&nbsp;Meus Cupons</a></li>
+                <li><a class="itensMenu" href="minhasEconomias.html">&nbsp;Minhas Economias</a></li>
+                <li><a class="itensMenu" href="login.html">&nbsp;Sair</a></li>
+            </ul>
+        </nav>
+
+        <div id="divStorie">
+            <button id="btnStorie" onclick="abrirStorie()">
+                <img id="imgStorie" src="./img/imgStorie.png" alt="Stories">
+            </button>
+        </div>    
+    </header>
+    <section id="centro">
+        <h1>Minhas Economias</h1>
+        <h4 class="blinking">Você perdeu 9 oportunidades de economizar esse mês!</h4>
+        <div id="divTabela"> 
+            <table>
+                <caption><h3>Economia Mensal</h3></caption>
+                <thead>
+                    <th> Loja </th>
+                    <th> Cupons Usados </th>
+                    <th> Cupons Expirados </th>
+                    <th> Economia </th>
+                </thead>
+                <tr>
+                    <td> Via Mia </td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>R$ 67,00</td>
+                    
+                </tr>
+                <tr>
+                    <td> Richards </td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>R$ 15,00</td>
+
+                </tr>
+                <tr>
+                    <td> Riachuelo </td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>R$ 132,00</td>
+                </tr>
+                <tfoot>
+                    <td> Total </td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>R$ 214,00</td>
+                </tfoot>
+            </table> 
+        </div>
+        
+        <div class="container">
+            <h3>Vizualização Gráfica</h3> <br>
+            <select name="meses" id="meses">
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <canvas id="chart"></canvas>
+        </div>  
+    </section>
+
+    <footer></footer>
+    <script src="./JS/storie.js"></script>
+    <script src="./JS/Chart.js"></script>
+    <script src="JS/grafico2.js"></script>    
+</body>
+</html>

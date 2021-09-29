@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/loginEcadastro.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/Modal.css">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link href="./style/global.css" rel="stylesheet">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="loading">
+        <img id="loading-image" src="img/load.gif" alt="Loading..." />
+    </div>
+    <div class="form">
+    <div id="imgLogo">                                  
+        <img id="logo"src="img/logo.png" alt="Descontaki">                    
+    </div>
+   
+   
+        <h1>Entrar</h1>
+        <input class="dados" type="text" name="cpf" data-js="cpf" id="CPF" placeholder="CPF"> <br>
+        <input class="dados" type="password" id="senha" placeholder="Senha"> <br>
+        <div id="divBtnLink">
+            <a class="btnOrangeL" id="logar" href="#">Entrar</a> <br>
+        </div>
+        <div class="separacao"><a class="links" href="#">Esqueceu a senha?</a> <br></div>
+        <div class="separacao"><a class="links" href="cadastro.html">Cadastre-se</a><br><br></div>
+        <div class="separacao"><a class="links" href="index.html">Voltar</a><br></div>
+        <!--Inicio do modal-->
+        <div id="modal-ativar" class="modal-container">
+            <div class="modal">
+                <div class="modal-body">
+                    <h3 id="msgErro" class="subtitulo"></h3>
+                </div>
+            </div>
+        </div>
+        <!--Fim do modal-->
+    </div> 
+    <script src="./JS/mascaraLogin.js"></script>
+    <script src="./JS/logar.js"></script>
+</body>
+
+</html>

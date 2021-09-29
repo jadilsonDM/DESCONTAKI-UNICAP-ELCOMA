@@ -1,0 +1,89 @@
+section#centro {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.1rem;
+	color: var(--color-grey-dark);
+}
+
+h1:after {
+	content: "";
+	display: block;
+	background-color: var(--color-orange);
+	height: 0.2rem;
+	width: 6rem;
+	border-radius: 5px;
+	margin: 1.6rem auto -6rem;
+}
+
+#divBtnLink:before {
+	content: "";
+	display: block;
+	background-color: var(--color-orange);
+	height: 0.2rem;
+	width: 6rem;
+	border-radius: 5px;
+	margin: 2.5rem auto 3rem;
+}
+
+a.links {
+	color: var(--color-grey-darker);
+	text-decoration: none;
+	font-size: 120%;
+}
+
+a.links:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	h1:after {
+		width: 8rem;
+		height: 0.2rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		margin-top: 1rem;
+		font-size: 1.7rem;
+	}
+
+	h1:after {
+		width: 6rem;
+		height: 0.2rem;
+	}
+}
+
+.showToast {
+	width: 320px;
+	height: 74px;
+	border-radius: 6px !important;
+	padding: 12px 20px 0 20px !important;
+}
+.toast-close {
+	opacity: 70% !important;
+	padding: 0 !important;
+	color: #fff;
+	display: flex;
+    justify-content: flex-end;
+    margin: -26px 0px 0px 0px;
+}
+#newInvoice {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    top: 320px;
+}
+#newInvoice img {
+	width: 160px;
+	cursor: pointer;
+}

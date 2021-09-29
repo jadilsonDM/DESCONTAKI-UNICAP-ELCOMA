@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/loginEcadastro.css" rel="stylesheet">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/Modal.css">
+    <link href="./style/global.css" rel="stylesheet">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div id="loading">
+        <img id="loading-image" src="img/load.gif" alt="Loading..." />
+    </div>
+    <div class="form">
+        <div id="imgLogo">
+            <img id="logo" src="img/logo.png" alt="Descontaki">
+        </div>
+
+        <h1>Novo Cadastro</h1>
+        <input class="dados" type="text" name="cpf" data-js="cpf" id="CPF" placeholder="CPF"> <br>
+        <input class="dados" id="senha" type="password" placeholder="Senha"> <br>
+        <input class="dados" id="confirmarSenha" type="password" placeholder="Confirmar senha"> <br>
+        <div id="divCheck">
+            <input id="check" type="checkbox">
+            <label for="check"> Aceito os Termos de Uso e a Política de Privacidade do site.</label>
+        </div>
+
+        <div id="divBtnLink">
+            <a class="btnOrangeL" id="cadastrar" href="#">Salvar</a> <br>
+        </div>
+        <!--Inicio do modal-->
+        <div id="modal-ativar" class="modal-container">
+            <div class="modal">
+                <div class="modal-body">
+                    <h3 id="msgErro" class="subtitulo"></h3>
+                </div>
+            </div>
+        </div>
+        <!--Fim do modal-->
+        <a class="links" href="login.html">Voltar</a><br><br>
+    </div>
+    <script src="./JS/mascaraCadastro.js"></script>
+    <script src="./JS/cadastrar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+canvas, .container select{
+    background: var(--color-grey-lighter);
+   border-radius: 5px;
+}
+
+.container{
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 600px;
+}
+.container select {
+    margin-bottom: 5px;
+    float: right;
+    width: 90px;
+}

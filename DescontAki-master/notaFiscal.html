@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/menu.css" rel="stylesheet">
+    <link href="./style/notaFiscal.css" rel="stylesheet">
+    <link href="./style/global.css" rel="stylesheet">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link href="./style/Modal.css" type="stylesheet" />
+
+    <link rel="stylesheet" href="style/camera.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script type="text/javascript" src="instascan.min.js"></script>
+    <title>Leitor NF</title>
+</head>
+
+<body>
+    <div id="loading">
+        <img id="loading-image" src="img/load.gif" alt="Loading..." />
+    </div>
+    <header>
+        <input type="checkbox" id="checkMenu">
+        <label id="labelCheckMenu" for="checkMenu">
+            <img id="imgMenu" src="img/menu.png" alt="menu">
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="itensMenu" href="home.html">&nbsp;Início</a></li>
+                <li>
+                    <a class="itensMenu" href="notaFiscal.html">&nbsp;Incluir Nota Fiscal</a>
+                </li>
+                <li><a class="itensMenu" href="dadosPessoais.html">&nbsp;Dados Pessoais</a></li>
+                <li><a class="itensMenu" href="meusCupons.html">&nbsp;Meus Cupons</a></li>
+                <li><a class="itensMenu" href="minhasEconomias.html">&nbsp;Minhas Economias</a></li>
+                <li><a class="itensMenu" href="login.html">&nbsp;Sair</a></li>
+            </ul>
+        </nav>
+
+        <div id="divStorie">
+            <button id="btnStorie" onclick="abrirStorie()">
+                <img id="imgStorie" src="./img/imgStorie.png" alt="Stories">
+            </button>
+        </div>
+
+    </header>
+
+    <section id="centro">
+        <h1>Leitor de Nota Fiscal </h1>
+        <video playsinline id="preview"></video>
+
+        <div id="newInvoice" onclick="startVideo()">
+            <img class="icones" src="./img/imgCode.png" alt="ícone QrCode">
+            <p class="txtIcones">Cadastrar nova <br /> Nota Fiscal </p>
+        </div>
+
+
+        <script>
+            let scanner = new Instascan.Scanner(
+                {
+                    video: document.getElementById('preview'),
+                    mirror: false,
+                }
+            );
+            scanner.addListener('scan', function (content) {
+                InserindoNota(content);
+                showNewInvoice();
+                scanner.stop();
+            });
+            Instascan.Camera.getCameras().then(cameras => {
+                let selectedCamera;
+
+                if (cameras.length > 0) {
+                    for (let c = 0; c < cameras.length; c++) {
+                        if (cameras[c].name.indexOf('back') != -1) {
+                            selectedCamera = cameras[c];
+                        }
+                    }
+
+                    if (!selectedCamera) {
+                        selectedCamera = cameras[0];
+                        let scanner = new Instascan.Scanner(
+                            {
+                                video: document.getElementById('preview'),
+                                mirror: true,
+                            }
+                        );
+                    }
+                }
+
+                if (selectedCamera) {
+                    scanner.start(selectedCamera);
+                    dismissLoad();
+                } else {
+                    console.error("Não existe câmera no dispositivo!");
+                    dismissLoad();
+                }
+            });
+
+            function startVideo() {
+                scanner.start()
+                hiddenNewInvoice();
+            }
+
+        </script>
+
+    </section>
+
+    <footer></footer>
+    <script src="./JS/storie.js"></script>
+    <script src="./JS/notaFiscal.js"></script>
+</body>
+
+</html>

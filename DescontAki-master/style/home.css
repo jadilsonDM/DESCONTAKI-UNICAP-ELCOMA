@@ -1,0 +1,295 @@
+#centro {
+	text-align: center;
+	color: var(--color-grey-dark);
+}
+
+div#personalizar {
+	margin: -4rem auto 4rem;
+	font-size: 100%;
+	color: var(--color-grey-dark);
+	max-width: 28rem;
+	text-align: center;
+	border: 1px solid var(--color-orange);
+	padding: 0.3rem 1rem 1rem 1.4rem;
+	border-radius: 5px;
+	display: none;
+}
+
+div#cabecalhoPersonalizar {
+	text-align: left;
+	/* display: none; */
+}
+
+div#cabecalhoPersonalizar h4 {
+	padding-bottom: 0.2rem;
+}
+
+div#cabecalhoPersonalizar button {
+	background-color: var(--color-grey-lighter);
+	border: none;
+	margin-left: 25.5rem;
+}
+
+.divRespostas input {
+	border-radius: 5px;
+	padding: 0.3rem;
+	width: 15rem;
+	border: none;
+	background-color: var(--color-grey-lighter);
+	font-size: 105%;
+	display: inline-block;
+}
+
+.perguntas {
+	margin: 0.5rem;
+}
+
+#respostas {
+	margin-top: 0.6rem;
+}
+
+.divRespostas button {
+	padding: 0.5rem;
+	color: white;
+	background-color: var(--color-orange);
+	border: none;
+	border-radius: 5px;
+	margin-left: 1rem;
+	font-size: 14px;
+}
+
+hr {
+	width: 15rem;
+	margin-left: 4rem;
+}
+
+:placeholder-shown {
+	text-align: center;
+}
+
+#respostaNome {
+	/* display: none; */
+}
+
+#respostaNascimento {
+	display: none;
+}
+
+#respostaNascimento input {
+	margin-left: 7rem;
+	width: 10rem;
+}
+
+#respostaNascimento button {
+	padding: 0.3rem;
+	color: white;
+	background-color: var(--color-orange);
+	border: none;
+	border-radius: 5px;
+	margin-left: 3rem;
+}
+
+#respostaSexo {
+	display: none;
+}
+
+#respostaEmail {
+	display: none;
+}
+
+#divMsgFinal {
+	display: none;
+	padding-bottom: 1rem;
+}
+
+#divMsgFinal button {
+	background-color: var(--color-grey-lighter);
+	border: none;
+	margin-left: 24rem;
+}
+
+#divMsgFinal h4 {
+	padding-bottom: 0.7rem;
+}
+
+#main {
+	font-size: 1.2rem;
+}
+
+h1 {
+	font-size: 2.1rem;
+}
+
+h1:after {
+	content: "";
+	display: block;
+	background-color: var(--color-orange);
+	height: 0.2rem;
+	width: 6rem;
+	border-radius: 5px;
+	margin: 1.6rem auto 4rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+span {
+	color: var(--color-orange);
+}
+
+div#botoes {
+	margin: auto auto 2rem auto;
+	display: grid;
+	grid-template: auto / auto auto auto;
+	justify-content: center;
+	padding: 3rem 0 0;
+	clear: both;
+	font-weight: bold;
+}
+
+img.icones {
+	height: 6rem;
+	margin-bottom: 3rem;
+	margin: 0.8rem auto;
+}
+
+.txtIcones:before {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 0.2rem;
+	background-color: var(--color-orange);
+	margin: 0.5rem auto 1.5rem;
+	border-radius: 5px;
+}
+
+#iconeCupons {
+	justify-self: center;
+	text-align: center;
+	font-size: 120%;
+	border: 2px solid var(--color-orange);
+	border-radius: 5px;
+	padding: 1rem 4rem;
+	margin: 0 1rem;
+	transition: 400ms;
+}
+
+#iconeCupons:hover {
+	background-color: rgba(255, 255, 255, 0.20);
+	/* box-shadow: 10px 15px rgb(190, 171, 135); */
+	transition: 400ms;
+}
+
+#iconeCode {
+	justify-self: center;
+	text-align: center;
+	font-size: 120%;
+	border: 2px solid var(--color-orange);
+	border-radius: 5px;
+	padding: 1rem 4.5rem;
+	margin: 0 1rem;
+	transition: 400ms;
+}
+
+#iconeCode:hover {
+	background-color: rgba(255, 255, 255, 0.20);
+	/* box-shadow: 10px 15px rgb(190, 171, 135); */
+	transition: 400ms;
+}
+
+#iconeEconomia {
+	justify-self: center;
+	text-align: center;
+	font-size: 120%;
+	border: 2px solid var(--color-orange);
+	border-radius: 5px;
+	padding: 1rem 4.5rem;
+	margin: 0 1rem;
+	transition: 400ms;
+}
+
+#iconeEconomia:hover {
+	background-color: rgba(255, 255, 255, 0.20);
+	/* box-shadow: 10px 15px rgb(190, 171, 135); */
+	transition: 400ms;
+}
+
+a {
+	color: var(--color-grey-darker);
+	font-size: 90%;
+}
+a:hover {
+	color: var(--color-orange);
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 1000px) {
+	#divStorie {
+		padding-right: 0.5rem;
+	}
+
+	#main {
+		font-size: 1.1rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h1:after {
+		width: 8rem;
+		height: 0.2rem;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#divStorie {
+		padding-right: 0.5rem;
+	}
+
+	#imgStorie {
+		height: 3rem;
+	}
+
+	div#personalizar {
+		margin: auto;
+	}
+
+	#main {
+		font-size: 1rem;
+	}
+
+	h1 {
+		margin-top: 1rem;
+		font-size: 1.7rem;
+	}
+
+	h1:after {
+		width: 6rem;
+		height: 0.2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	div#botoes {
+		display: grid;
+		grid-template: auto auto auto / auto;
+	}
+
+	#iconeCode {
+		margin-top: 1.5rem;
+	}
+
+	#iconeEconomia {
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+	}
+}

@@ -1,0 +1,246 @@
+body {
+	background-color: var(--color-grey-lighter) !important;
+	overflow-x: hidden;
+}
+section#centro {
+	text-align: center !important;
+}
+
+h1 {
+	font-size: 2.1rem;
+	color: var(--color-grey-dark);
+}
+h1#title {
+	margin: 80px 0 0 0;
+}
+
+ul {
+	top: 100px;
+}
+
+/* h1:after {
+	content: "";
+	display: block;
+	background-color: var(--color-orange);
+	height: 0.2rem;
+    width: 4rem;
+	border-radius: 5px;
+	margin: 1.6rem auto 2.5rem;
+} */
+
+h4 {
+	font-size: 1.5rem;
+	color: var(--color-grey-dark);
+	margin: 10px 1rem;
+}
+
+div#inst {
+	margin: auto;
+	padding: 1rem 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 30rem;
+	display: grid;
+}
+
+div.cupomInst {
+	width: 22rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	position: relative;
+	border: 2px solid var(--color-orange);
+	font-size: 110%;
+}
+
+div.txtCupInst {
+	display: flex;
+	float: left;
+	width: 15rem;
+	text-align: left;
+	padding-left: 0.7rem;
+	margin-bottom: 1rem;
+}
+
+div.btnCup {
+	display: flex;
+	float: right;
+	align-items: center;
+	position: absolute;
+	top: 1rem;
+	right: 0.5rem;
+	padding: 0.4rem 0.6rem;
+	background-color: var(--color-orange);
+	color: white;
+	border-radius: 5px;
+	font-size: 90%;
+	cursor: pointer;
+}
+
+.numCupom {
+	color: var(--color-orange);
+	height: 2rem;
+	clear: both;
+	padding-top: 0.2rem;
+	width: 16rem;
+	display: none;
+	margin: 0.5rem auto;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px dashed var(--color-grey-darker);
+}
+
+div#missao {
+	margin: auto;
+	padding: 1rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 110%;
+	width: 30em;
+}
+
+div.cupomMissao {
+	width: 22rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	position: relative;
+	border: 2px solid var(--color-orange);
+	text-align: left;
+}
+
+div.txtCupMis {
+	display: flex;
+	float: left;
+	width: 18rem;
+	text-align: left;
+	padding-left: 0.7rem;
+}
+
+div.btnCupInativo {
+	display: flex;
+	float: right;
+	align-items: center;
+	position: absolute;
+	top: 1rem;
+	right: 0.5rem;
+	padding: 0.3rem 0.5rem;
+	border: 2px solid var(--color-orange-lighter);
+	color: var(--color-orange-lighter);
+	border-radius: 5px;
+	font-size: 90%;
+
+	/* rgba(255, 255, 255, 0.89); para se colocar opaco */
+}
+
+small {
+	padding: 0 0.6rem;
+	font-size: 80%;
+}
+
+.divSmall {
+	text-align: right;
+}
+
+.barraProgresso {
+	margin: 1.5rem 0 0 0.5rem;
+	height: 1.5rem;
+	border: 2px solid var(--color-grey-dark);
+	border-radius: 10px;
+	display: flex;
+}
+
+.preencherProgresso {
+	background-color: var(--color-grey-dark);
+	width: 40%;
+	border-radius: 4px;
+}
+
+.progressoConcluido {
+	background-color: var(--color-grey-dark);
+	width: 100%;
+	border-radius: 3px;
+}
+
+.separacao {
+	margin: 2rem 0;
+}
+.itensMenu {
+	text-decoration: none !important;
+}
+a.links {
+	color: var(--color-grey-darker);
+	text-decoration: none;
+	font-size: 120%;
+}
+
+a.links:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1150px) {
+	div#inst {
+		width: 30rem;
+		/* background-color: white;   */
+	}
+	div#missao {
+		width: 30rem;
+		/* background-color: white;   */
+	}
+}
+
+.couponsMissions {
+	text-align: center !important;
+}
+.couponsMissions label {
+	font-weight: normal;
+}
+
+.couponsMissions button {
+	width: 60px;
+	height: 30px;
+	border-radius: 10px;
+	margin: 0 0 0 70px;
+	background-color: var(--color-grey-dark);
+	color: #fff;
+}
+.couponsMissions button:disabled {
+	background-color: transparent;
+	border: 1px solid;
+	color: var(--color-grey-dark);
+	width: 60px;
+}
+#goalValue {
+	margin: 0 0 0 212px;
+	font-size: 12px;
+}
+
+#amount {
+	margin: 0 0px 0 24px;
+    text-align: initial;
+    display: flex;
+}
+.progress {
+	width: 280px;
+	margin-bottom: 4px !important;
+	margin: 10px 0 0px 10px;
+}
+.contentCouponMissios {
+	border: 2px solid var(--color-orange);
+	border-radius: 5px;
+	width: 352px;
+	height: 100%;
+	display: inline-block;
+	padding: 10px;
+}
+hr {
+	content: "";
+	display: block;
+	background-color: #fa4505;
+	height: 0.2rem !important;
+	width: 4rem;
+	border: none;
+	border-radius: 5px;
+	margin: 1rem auto;
+}

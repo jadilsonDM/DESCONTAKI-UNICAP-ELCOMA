@@ -1,0 +1,29 @@
+/* Geral */
+
+:root {
+    --color-grey-lighter: #dad8d8;
+    --color-grey-ligth: #686c6d;
+    --color-grey-dark: rgb(54, 53, 53);
+    --color-grey-darker: #000000d5;
+    --color-orange-lighter: #ec6533;
+    --color-orange-light: #fa4605;
+    --color-orange: #fa4505;
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+body {
+    background-color: var(--color-grey-lighter);
+    line-height: 1.5;
+}

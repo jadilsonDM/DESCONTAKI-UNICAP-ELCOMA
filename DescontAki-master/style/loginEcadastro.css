@@ -1,0 +1,97 @@
+body {
+    background-color: rgba(0, 0, 0, .80);
+}
+div#imgLogo {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+img#logo{
+    margin-left:1rem ;
+    height: 8rem;
+}
+
+div.form{
+    text-align: center;  
+    margin: auto;
+    max-width: 40rem;
+    padding: 0px 0px 5px 5px;
+    border-radius: 30px;
+}
+
+h1{
+   color: var(--color-grey-lighter);
+   margin: 1.5rem;
+}
+
+h1:after{
+    content: "";
+    display: block;
+    background-color: var(--color-orange);
+    height: 0.2rem;
+    width: 4rem;
+    border-radius: 5px;
+    margin: 1rem auto;
+}
+
+input.dados{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-grey-dark);
+    background-color: var(--color-grey-lighter);
+    font-size: 100%;
+    width: 18rem;
+    border: 1px solid var(--color-grey-lighter);
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.btnOrangeL{
+    font-size: 120%;
+    color: white;
+    background-color: var(--color-orange);
+    padding: 0.7rem 7.3rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+}
+
+#divBtnLink{
+    padding: 1.7rem 0;
+}
+
+.btnOrangeL:hover{
+    background-color: var(--color-orange-lighter);
+    text-decoration: underline;
+}
+
+.separacao{
+    margin-bottom: 0.5rem;
+}
+
+a.links{
+    color: var(--color-grey-lighter);
+    text-decoration: none;
+}
+
+a.links:hover{
+    text-decoration: underline;
+}
+
+label{
+    color: var(--color-grey-lighter);   
+}
+
+#divCheck{
+    margin-top: 0.7rem;
+    padding: 0.5rem 0rem;
+    text-align: left;
+    width: 300px;
+    display: inline-flex;
+}
+
+#check{
+    margin: 0.3rem 0.4rem 0 0.5rem;
+}
+
+

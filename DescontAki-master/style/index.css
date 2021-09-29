@@ -1,0 +1,186 @@
+
+/* Barra Superior */
+
+nav {
+    background-color: var(--color-grey-darker);
+    height: 5rem;
+    padding: 1.5rem;
+    text-align: right;
+}
+
+a.btn1 {
+    font-size: 90%;
+    font-weight: 500;
+    background-color: var(--color-orange);
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 3rem;
+}
+
+a:hover, a.btn1:hover, a.btn2:hover {
+    background-color: var(--color-orange-lighter);
+    text-decoration: underline;
+}
+
+/* Parte 1  */
+
+section#parte1 {
+    height: 34rem;
+    background-color: var(--color-grey-darker);
+    clear: both;
+}
+
+div#imgLogo {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+div#msg {
+    color: var(--color-grey-lighter);
+    margin: 3rem auto;
+    font-size: 1.8rem;
+    width: 80vw;
+    text-align: center;
+}
+
+/* Parte 2 */
+
+section#parte2 {
+    background-image: url(../img/compras.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-size: 150%;
+}
+
+span {
+    color: var(--color-orange);
+    font-style: italic;
+}
+
+a.btn2 {
+    font-size: 100%;
+    background-color: var(--color-orange);
+    padding: 0.7rem 4rem;
+    border-radius: 5px;
+    border: none;
+    margin: 5rem;
+}
+
+div#msg2 {
+    color: var(--color-grey-darker);
+    font-size: 130%;
+    padding: 8rem 0 10rem 5rem;
+    width: 45%;
+}
+
+/* Parte 3  */
+
+section#parte3 {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    padding: 4rem 0;
+    clear: both; 
+}
+
+img.icones {
+    height: 6rem;
+    margin-bottom: 3rem;
+    margin: 0.8rem auto;
+}
+
+.txtIcones:before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: var(--color-orange);
+    margin: 1rem auto 2rem;
+    border-radius: 5px;
+}
+
+#iconeCadastro {
+    justify-self: center;
+    text-align: center;
+    max-width: 60%;
+    font-size: 120%;
+}
+
+#iconeCode {
+    justify-self: center;
+    text-align: center;
+    max-width: 60%;
+    font-size: 120%;
+}
+
+#iconeCupons {
+    justify-self: center;
+    text-align: center;
+    max-width: 60%;
+    font-size: 120%;
+}
+
+/*Rodapé*/
+
+footer {
+    display: block;
+    height: 8vh;
+    clear: both;
+    background-color: var(--color-orange-light);
+    color: whitesmoke;
+    font: bold;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width:1200px) {
+    a.btn2 {
+        margin-left: 2rem;
+    }
+    div#msg2 {
+        width: 50%;
+        padding: 7rem 2rem 12rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    div#msg {
+        width: 70%;
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+    }
+    a.btn2 {
+        font-size: 100%;
+        margin-left: 2rem;
+    }
+    div#msg2 {
+        width: 60%;
+        padding: 6rem 2rem 12rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    div#msg {
+        width: 90%;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    section#parte2 {
+        height: 110vh;
+    }
+    div#msg2 {
+        width: 70%;
+        padding: 6rem 2rem 12rem;
+    }
+    a.btn2 {
+        margin-left: 1rem;
+        padding: 0.7rem 3rem;
+        font-size: 90%;
+    }
+}

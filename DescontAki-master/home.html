@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/menu.css" rel="stylesheet">
+    <link href="./style/home.css" rel="stylesheet">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <title>Home</title>
+</head>
+
+<body onload="carregarPersonalizacoes()">
+    <header>
+
+        <input type="checkbox" id="checkMenu">
+        <label id="labelCheckMenu" for="checkMenu">
+            <img id="imgMenu" src="img/menu.png" alt="menu">
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="itensMenu" href="home.html">&nbsp;Início</a></li>
+                <li><a class="itensMenu" href="notaFiscal.html">&nbsp;Incluir Nota Fiscal</a></li>
+                <li><a class="itensMenu" href="dadosPessoais.html">&nbsp;Dados Pessoais</a></li>
+                <li><a class="itensMenu" href="meusCupons.html">&nbsp;Meus Cupons</a></li>
+                <li><a class="itensMenu" href="minhasEconomias.html">&nbsp;Minhas Economias</a></li>
+                <li><a class="itensMenu" href="login.html">&nbsp;Sair</a></li>
+            </ul>
+        </nav>
+
+        <div id="divStorie">
+            <button id="btnStorie" onClick="abrirStorie()">
+                <img id="imgStorie" src="./img/imgStorie.png" alt="Stories">
+            </button>
+        </div>
+
+        <div id="personalizar"> 
+            <div id="cabecalhoPersonalizar">
+                <button onclick="fecharBalao()"> X </button>
+                <h4>Personalize seu Aplicativo! </h4>
+                Queremos te presentear com as melhores promoções para o seu perfil. <br>
+            </div>
+
+            <div id="respostaNome" class="divRespostas">
+                <div class="perguntas">
+                    <b> Como você gostaria de ser chamado(a)? </b> <br>   
+                </div>
+                <input id="inputRespNome" type="text" placeholder="Nome / Apelido">  
+                <button class="salvarRespostas" onclick="salvarNome()"> Salvar</button>
+                <hr>
+            </div>
+
+            <div id="respostaNascimento" class="divRespostas">
+                <div class="perguntas">
+                    <b> Qual a sua data de nascimento? </b> <br>   
+                </div>
+                <input type="date" id="inputRespNasc"> 
+                <button onclick="salvarNasc()"> Salvar</button>
+            </div>
+
+            <div id="respostaSexo">  
+                <div class="perguntas">
+                    <label for="sexo"><b> Qual o seu sexo? </b></label><br> 
+                </div>
+                <input id="inputRespMasc" type="radio" name="sexo" value="masc" onchange="salvarSexoMasc()"> &nbsp;Masculino &nbsp;&nbsp;&nbsp;&nbsp;
+                
+                <input id="inputRespFem" type="radio" name="sexo" value="fem" onchange="salvarSexoFem()"> &nbsp;Feminino
+            </div>
+            
+            <div id="respostaEmail" class="divRespostas">
+                <div class="perguntas">
+                    <b> Deseja receber seus cupons, além de avisos de eventos e promoções por e-mail? </b>   
+                </div>
+                <input id="inputRespEmail" type="email" placeholder="Digite seu e-mail">  
+                <button class="salvarRespostas" onclick="salvarEmail()"> Salvar</button>
+                <hr>
+            </div>
+            
+            <div id="divMsgFinal">
+                <button onclick="fecharBalao()"> X </button><br>   
+                <h4>Parabéns! </h4>
+                Seus dados foram salvos com sucesso.
+            </div>
+        </div>
+        
+    </header>
+    
+    <section id="centro">
+        
+        <div id="main">
+            <h1>Seja Bem-Vindo(a)!</h1> 
+            <h3>O que deseja fazer?</h3>
+            
+            <div id="botoes">
+            
+                <div id="iconeCupons">
+                    <a href="meusCupons.html">
+                        <img class="icones" src="./img/imgCupons.png" alt="ícone cupons">
+                        <p class="txtIcones"> Meus Cupons </p> 
+                    </a>
+                </div>
+
+                <div id="iconeCode">
+                    <a href="notaFiscal.html">
+                        <img class="icones" src="./img/imgCode.png" alt="ícone QrCode">
+                        <p class="txtIcones">Cadastrar <br> Nota Fiscal </p>
+                    </a>
+                </div>
+    
+                <div id="iconeEconomia">
+                    <a href="minhasEconomias.html">
+                        <img class="icones" src="./img/imgEconomia.png" alt="ícone economia">
+                        <p class="txtIcones"> 
+                            Economia <br><small>(Out 2020)</small>
+                        </p>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </section>
+    <footer></footer>
+    <script src="./JS/home.js"></script>
+    <script src="./JS/storie.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

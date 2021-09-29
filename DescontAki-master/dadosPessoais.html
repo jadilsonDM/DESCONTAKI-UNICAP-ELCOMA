@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/menu.css" rel="stylesheet">
+    <link href="./style/dadosPessoais.css" rel="stylesheet">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link href="./style/global.css" rel="stylesheet">
+
+    <title>Dados Pessoais</title>
+</head>
+<body onload="preencherCampos()">
+    <div id="loading">
+        <img id="loading-image" src="img/load.gif" alt="Loading..." />
+    </div>
+    
+    <header>
+        <input type="checkbox" id="checkMenu">
+        <label id="labelCheckMenu" for="checkMenu">
+            <img id="imgMenu" src="img/menu.png" alt="menu">
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="itensMenu" href="home.html">&nbsp;Início</a></li>
+                <li>
+                    <a class="itensMenu" href="notaFiscal.html">&nbsp;Incluir Nota Fiscal</a>
+                </li>
+                <li><a class="itensMenu" href="dadosPessoais.html">&nbsp;Dados Pessoais</a></li>
+                <li><a class="itensMenu" href="meusCupons.html">&nbsp;Meus Cupons</a></li>
+                <li><a class="itensMenu" href="minhasEconomias.html">&nbsp;Minhas Economias</a></li>
+                <li><a class="itensMenu" href="login.html">&nbsp;Sair</a></li>
+            </ul>
+        </nav>
+        
+        <div id="divStorie">
+            <button id="btnStorie" onclick="abrirStorie()">
+                <img id="imgStorie" src="./img/imgStorie.png" alt="Stories">
+            </button>
+        </div>
+        
+    </header>
+    <section id="centro">
+        <h1>Dados Pessoais</h1>
+        
+        <div id="form">
+            <div id="divCpf">
+                <input id="cpf"class="camposForm" type="text" disabled> 
+                <small>*Campo Obrigatório</small>
+            </div>
+            <div class="divLabelInput">
+                <label for="nome">Nome ou Apelido</label>
+                <input class="camposForm" id="nome" type="text"> 
+            </div>
+            <div class="divLabelInput">
+                <label for="email">E-mail</label>          
+                <input class="camposForm" id="email" type="email"> 
+            </div>
+            <div class="divLabelInput">
+                <label for="nascimento">Data de Nascimento</label>
+                <input class="camposForm" id="nascimento" type="date">
+            </div>
+            <div id="divSexo">
+                <label for="sexo" id="sexo">Sexo</label> <br>
+                <input type="radio" id="M" name="sexo" value="m" onchange="localStorage.setItem('sexo','M')"> Masculino
+                <input type="radio" id="F" name="sexo" value="f" onchange="localStorage.setItem('sexo','F')"> Feminino
+            </div>
+            
+            <div id="divBtnLink">
+                <a class="btnOrangeL" onclick="salvarDados()">Salvar</a> <br>
+            </div>
+            <div class="separacao">
+                <a class="links" href="#" onclick="limparDados()">Apagar todos os dados</a> <br>
+            </div>
+            <div class="separacao">
+                <a class="links" href="#">Alterar Senha</a> <br>
+            </div>
+            
+        </div>       
+    </section>
+    <footer></footer>
+    <script src="./JS/dadosPessoais.js"></script>
+    <script src="./JS/storie.js"></script>
+</body>
+</html>

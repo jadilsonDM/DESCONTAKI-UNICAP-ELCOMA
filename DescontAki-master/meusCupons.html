@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./style/main.css" rel="stylesheet">
+    <link href="./style/menu.css" rel="stylesheet">
+    <link href="./style/meusCupons.css" rel="stylesheet">
+    <link rel="icon" href="img/Icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="./style/global.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Meus Cupons</title>
+</head>
+
+<body>
+    <div id="loading">
+        <img id="loading-image" src="img/load.gif" alt="Loading..." />
+    </div>
+    <header>
+        <input type="checkbox" id="checkMenu">
+        <label id="labelCheckMenu" for="checkMenu">
+            <img id="imgMenu" src="img/menu.png" alt="menu">
+        </label>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a class="itensMenu" href="home.html">&nbsp;Início</a></li>
+                <li>
+                    <a class="itensMenu" href="notaFiscal.html">&nbsp;Incluir Nota Fiscal</a>
+                </li>
+                <li><a class="itensMenu" href="dadosPessoais.html">&nbsp;Dados Pessoais</a></li>
+                <li><a class="itensMenu" href="meusCupons.html">&nbsp;Meus Cupons</a></li>
+                <li><a class="itensMenu" href="minhasEconomias.html">&nbsp;Minhas Economias</a></li>
+                <li><a class="itensMenu" href="login.html">&nbsp;Sair</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section id="centro">
+        <div id="inst">
+            <h1 id="title">Meus Cupons</h1>
+            <hr>
+            <h3>Cupons Instantâneos</h3>
+            <br>
+    </section>
+    <div class="couponsMissions">
+        <h3>Cupons Missão</h3>
+        <br>
+        <div class="contentCouponMissios">
+            <label>Estacionamento Grátis*</label>
+            <button id="generateCode" onclick="generateCode()">Ativar</button>
+            <br>
+            <label id="amount">Total Cadastrado: <strong id="totalCadastrado"></strong></label>
+            <div class="container">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar">
+                    </div>
+                </div>
+            </div>
+            <strong id="goalValue"></strong>
+            <div id="showCode"></div>
+        </div>
+    </div>
+    <hr>
+
+    <footer></footer>
+    <script src="./JS/meusCupons.js"></script>
+    <script src="./JS/storie.js"></script>
+</body>
+
+</html>
